@@ -13,10 +13,13 @@
 
 
 		<header>
+				
 			<div class="container">
 				<h1 class="titulo">Aparecida Nutrição</h1>
 			</div>
+			
 		</header>
+		
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
@@ -33,7 +36,7 @@
 					<tbody id="tabela-pacientes">
 						<tr class="paciente" id="primeiroPaciente">
 							<td class="info-nome">Paulo</td>
-							<td class="info-peso">100</td>
+							<td class="info-peso">1001</td>
 							<td class="info-altura">2.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc"></td>
@@ -75,25 +78,7 @@
 			</section>
 		</main>
 
-		<script>
-			//pesquisar algo no document
-			var titulo = document.querySelector(".titulo");
-			console.log(titulo);
-			console.log(titulo.textContent);
-			titulo.textContent = "Aparecida Nutricionista";
-
-
-			var paciente = document.querySelector("#primeiroPaciente");
-			var tdPeso = paciente.querySelector(".info-peso");
-			var peso = tdPeso.textContent;
-			var tdAltura = paciente.querySelector(".info-altura");
-			var Altura = tdAltura.textContent;
-
-			var imc = peso/(Altura*Altura);
-
-			console.log(imc);
-			
-		</script>
+		<script src="js/funcao.js"></script>
 
 	</body>
 </html>
