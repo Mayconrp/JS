@@ -13,6 +13,8 @@ for(var i = 0 ; i < pacientes.length ; i++){
 
 // query selector traz algum elemento, apenas um elemento
     var tdPeso = paciente.querySelector(".info-peso");
+
+    // textContent acessa conteúdo de texto
     var peso = tdPeso.textContent;
 
     var tdAltura = paciente.querySelector(".info-altura");
@@ -26,12 +28,16 @@ for(var i = 0 ; i < pacientes.length ; i++){
         console.log("Peso Inválido!");
         pesoValido = false;
         tdImc.textContent = "Peso inválido!" ;
+        // acessando o css 
+        paciente.classList.add("paciente-invalido");
     }
 
     if(Altura <= 0 || Altura >= 3.00){
         console.log("Altura Invalida!");
         alturaValida = false;
         tdImc.textContent = "Altura inválida!" ;
+        // acessando o css 
+        paciente.classList.add("paciente-invalido");
     }
 
     if(pesoValido && alturaValida){
