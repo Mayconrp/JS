@@ -1,5 +1,4 @@
 
-
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Aparecida Nutricionista";
 
@@ -7,8 +6,8 @@ titulo.textContent = "Aparecida Nutricionista";
 var pacientes = document.querySelectorAll(".paciente");
 
 for(var i = 0 ; i < pacientes.length ; i++){
-    
-    //pega a lista de pacientes 
+
+    //pega a lista de pacientes
     var paciente = pacientes[i];
 
 // query selector traz algum elemento, apenas um elemento
@@ -28,7 +27,7 @@ for(var i = 0 ; i < pacientes.length ; i++){
         console.log("Peso Inválido!");
         pesoValido = false;
         tdImc.textContent = "Peso inválido!" ;
-        // acessando o css 
+        // acessando o css
         paciente.classList.add("paciente-invalido");
     }
 
@@ -36,7 +35,7 @@ for(var i = 0 ; i < pacientes.length ; i++){
         console.log("Altura Invalida!");
         alturaValida = false;
         tdImc.textContent = "Altura inválida!" ;
-        // acessando o css 
+        // acessando o css
         paciente.classList.add("paciente-invalido");
     }
 
@@ -46,3 +45,11 @@ for(var i = 0 ; i < pacientes.length ; i++){
     }
 }
 
+// escutar evento / função chamada direto do addEventListener
+//titulo.addEventListener("click", function() {
+//   console.log(" olha função anônima! ");
+
+titulo.addEventListener("click", mostraMensagem);
+    function mostraMensagem(){
+    console.log("Olá eu fui clicado!");
+}
